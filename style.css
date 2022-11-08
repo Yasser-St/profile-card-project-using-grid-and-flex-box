@@ -39,7 +39,7 @@ body{
         top: -160%;
         left: -256%;
         transform: translate(50%, 50%);
-        background: url(./images-pro/bg-pattern-top.svg) no-repeat right bottom;
+        background: url(./images/bg-pattern-top.svg) no-repeat right bottom;
       }
       
       .bg-bottom {
@@ -47,9 +47,9 @@ body{
         right: -40%;
         width: 60%;
         transform: translate(-50%, -50%);
-        background: url(./images-pro/bg-pattern-bottom.svg) no-repeat left top;
+        background: url(./images/bg-pattern-bottom.svg) no-repeat left top;
       }
-    /*  Style Card  */
+    /*  Style card start  */
 
 article{
     background-color: var(--White);
@@ -123,6 +123,31 @@ article{
 
 }
 
+      /* Card style end  */
+    /* Footer style start*/
+
+.attribution{
+   font-size: 11px;
+   text-align: center;
+   color: var(--Very-dark-desaturated-blue);
+   font-weight: 400;
+   margin-top: -30px; 
+   display: flex;
+   justify-content: center;
+}
+
+.attribution a{
+    color: var(--White);
+    text-decoration: none; 
+}
+
+.attribution a:hover{
+    color: hsl(258, 75%, 39%);
+    cursor: pointer;
+    text-decoration: dashed;
+}
+
+
 @media only screen and (max-width:900px) {
  
     article{
@@ -156,5 +181,19 @@ article{
         place-content: center;
         
     }
+
+        /*  Footer  */
+    .attribution{
+            font-size: 13px;
+            text-align: center;
+            color: var(--Very-dark-desaturated-blue);
+            font-weight: 400;
+            margin-top: -30px; 
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+         }
+         
 }
 
