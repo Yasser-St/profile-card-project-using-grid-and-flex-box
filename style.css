@@ -1,0 +1,160 @@
+:root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --White: rgb(255, 255, 255);  
+    --prim-gray: hsl(227, 10%, 46%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+    /*  Defult  */  
+*,
+::before,
+::after{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color:var(--Dark-cyan);
+    display: grid;
+    place-content: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
+   
+}
+    /*  Style bg    */
+
+    .bg-top,
+    .bg-bottom {
+        position: absolute;
+        width: 200%;
+        height: 150%;
+      }
+      
+      .bg-top {
+        top: -160%;
+        left: -256%;
+        transform: translate(50%, 50%);
+        background: url(./images-pro/bg-pattern-top.svg) no-repeat right bottom;
+      }
+      
+      .bg-bottom {
+        bottom: -175%;
+        right: -40%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        background: url(./images-pro/bg-pattern-bottom.svg) no-repeat left top;
+      }
+    /*  Style Card  */
+
+article{
+    background-color: var(--White);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    width: 350px;
+    min-width: 320px;
+    margin: 4rem;
+    box-shadow: 1px 1px 100px 1px var(--prim-gray);
+    position: relative;
+}
+
+.profile-bg img{
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+}
+
+.profile-pic img{
+    border-radius: 50%;
+    border:5px solid var(--White);
+    margin-top: -50px;
+}
+
+.profile-user-name{
+   margin: 20px 0 26px 0;
+   border-bottom: 1px solid hsla(227, 10%, 46%, 0.13)  ; 
+}
+
+.profile-user-name h1{
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 700;
+    font-size: 1.12em;
+    margin-bottom: 6px;
+}
+
+.profile-user-name h1 span{
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+}
+
+.profile-user-name p{
+    color: var(--Dark-grayish-blue);
+    font-size: .9em;
+    font-weight:400;
+    margin-bottom: 20px;
+}
+
+.grid ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    place-content: center;
+    
+}
+
+.grid ul li {
+    margin-bottom: 22px;
+}
+
+.grid ul li h2{
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+.grid ul li p {
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    font-size: .8em;
+
+}
+
+@media only screen and (max-width:900px) {
+ 
+    article{
+        text-align: center;
+        width: 334px;
+        margin: 4em;
+    }
+}
+
+@media only screen and (max-width:425px) {
+
+    .bg-bottom {
+      bottom: -185%;
+      right: -40%;
+      width: 70%;
+      height: 160%;
+    }
+        /*  Card  */
+    article{
+        background-color: var(--White);
+        border-radius: 10px 10px 10px 10px;
+        text-align: center;
+        width: 320px;
+        margin: 6rem;
+    }
+    
+    .grid ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: 29% 29% 29%;
+        place-content: center;
+        
+    }
+}
+
